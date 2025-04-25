@@ -1,0 +1,252 @@
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #FF6F61;
+    --soft-bg: #E3E7EC;
+    --dark-text: #e33939;
+    --light-text: #ffffff;
+    --shadow-light: 6px 6px 12px rgba(0, 0, 0, 0.08), -6px -6px 12px rgba(255, 255, 255, 0.7);
+    --shadow-lg: 10px 10px 24px rgba(0, 0, 0, 0.12), -10px -10px 24px rgba(255, 255, 255, 0.5);
+    --radius-large: 1.5rem;
+    --radius-small: 0.75rem;
+    --transition-smooth: 0.4s ease-in-out;
+}
+/* 🔹 Títulos con color claro */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--light-text); /* Texto blanco para mayor visibilidad */
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--light-text); /* Texto blanco o claro */
+    text-align: center;
+}
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-text); /* Texto blanco o claro */
+    text-align: center;
+}
+/* 🔹 Estilo para textos lead */
+.lead {
+    color: var(--light-text); /* Blanco o color claro */
+    text-align: center;
+}
+/* 🔹 Ajuste para h2 con clase .interior */
+h2.interior {
+    color: black;
+    text-align: center;
+}
+h2.oscuro {
+    color: black;
+}
+h5.card-title1{
+    color: black;;
+}
+p.card-text1{
+    color: black;
+}
+h2.card-title1{
+    color: black;
+}
+.card-body {
+
+
+    p{
+        color: black;
+    }
+  }
+.form-label {
+    color: white;
+}
+/* 🔹 Ajuste del Navbar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95); /* Fondo claro */
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-light);
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start; /* Alineado a la izquierda */
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+/* 🎨 Ajuste del navbarCollapse */
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    flex-wrap: wrap;
+}
+
+/* 🔹 Enlaces de navegación */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+/* 🔸 Botones */
+.main-nav-link-btn {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 1rem;
+}
+
+/* 💻 Ajuste para móviles */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .main-nav-link-btn {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* 🎞️ Video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(1.1);
+}
+
+/* 🔸 Footer mejorado */
+.footer {
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--dark-text);
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-light);
+}
+/* 🔹 Hero Section sin fondo sólido para ver el video */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: transparent; /* 🔥 Hace el fondo transparente */
+    position: relative; /* 🔹 Mantiene la estructura */
+    z-index: 1; /* 🔹 Asegura que el contenido esté sobre el video */
+}
+/* 🏆 Contenedor principal */
+.hero-container {
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.85); /* 🔥 Reduce opacidad para ver el video */
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    position: relative;
+    z-index: 2; /* 🔹 Eleva el contenido sobre el fondo */
+}
+
+/* 🎨 Ajuste para títulos y textos */
+.hero-container h2 {
+    color: var(--light-text); /* Texto claro */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.hero-container p {
+    font-size: 1.2rem;
+    color: var(--dark-text);
+}
+
+/* 🔹 Botón con efecto neumorfismo */
+.hero-container .btn-primary {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    background: var(--primary-color);
+    border-radius: var(--radius-small);
+    color: white;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.hero-container .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-light);
+}
+
+/* 💻 Responsive */
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .hero-container h2 {
+        font-size: 2rem;
+    }
+
+    .hero-container p {
+        font-size: 1rem;
+    }
+
+}
+/* 🔹 Ajuste para h2.contact en negro */
+h2.contact {
+    color: #000000; /* Negro */
+}
+
+/* 🔹 Párrafos con color claro */
+p {
+    color: var(--light-text); /* Blanco o tono claro */
+}
+/* 🔹 Estilo para h5 con color claro */
+h5 {
+    color: var(--light-text); /* Blanco o tono claro */
+}
+/* 🔹 Estilo para p.oscuro con color oscuro */
+p.oscuro {
+    color: var(--dark-text); /* Usa el color oscuro definido en las variables */
+}
+/* 🔹 Estilo para p.mt-3.text-center con color oscuro */
+p.mt-3.text-center {
+    color: var(--dark-text); /* Usa el color oscuro definido en las variables */
+}
+h1.mb-3{
+    color: black;
+    text-align: center;
+}
+h1.mb-31{
+    color: white;
+    text-align: center;
+}
+/* 🔹 Ajuste para `div.edit-item-cont` con color blanco */
+div.edit-item-cont {
+    color: #ffffff; /* Texto blanco */
+}
+
+.form-label {
+    color: black;
+}
+
